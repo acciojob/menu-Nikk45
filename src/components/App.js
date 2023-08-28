@@ -93,7 +93,7 @@ const App = () => {
             <div className="navbar">
             {
                 categories.map((category,index)=>
-                <p id={selectedCategory===category?`filter-btn-${index}`: ''} key={index}
+                <p id={`filter-btn-${index}`} key={index}
                     data-test-id={`menu-item-${category}`}
                     className={selectedCategory === category ? 'active' : ''}
                     onClick={() => setSelectedCategory(category)}>
