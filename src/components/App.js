@@ -93,7 +93,7 @@ const App = () => {
             <div className="navbar">
             {
                 categories.map((category,index)=>
-                <p key={index}
+                <p id={`filter-btn-${index}`} key={index}
                     className={selectedCategory === category ? 'active' : ''}
                     onClick={() => setSelectedCategory(category)}>
                     {category}
@@ -101,7 +101,7 @@ const App = () => {
                 )
             }
             </div>
-            <div className="dishes">
+            <div id="main" className="dishes">
                 {filteredDishes.map((dish) => (
                 <div key={dish.id} className="dish">
                     <img src={dish.img} alt={dish.title} />
